@@ -5,6 +5,7 @@ import random
 import tkinter.filedialog
 import os
 
+#Create node for Linked List
 class node:
       def __init__(self,name,moves,nextnode=None):
             self.name=name
@@ -29,6 +30,7 @@ class node:
       def setnextnode(self,nextnode):
             self.nextnode=nextnode
 
+#Create Linked List
 class LinkedList:
       def __init__(self,head=None):
             self.head=head
@@ -161,8 +163,10 @@ class Board(Frame):
                   image=image.crop((0,0,image.size[0],image.size[0]))
 
             return image
-
-      def bindKeys(self):
+      
+      #For making corresponding move to the tile
+      
+      def bindKeys(self):                 
 
             self.bind_all('<Key-Up>',self.slide)            
             self.bind_all('<Key-Down>',self.slide)            
